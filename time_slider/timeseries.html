@@ -1,0 +1,299 @@
+<html>
+  <head>
+    <title>Leaflet.timeline Morocco</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    
+    
+    <!-- load plugin full screen -->
+    <link rel="stylesheet" href="Control.FullScreen.css" />
+    <script src="Control.FullScreen.js"></script>
+    <!-- load plugin scale bar -->
+    <link rel="stylesheet" href="L.Control.BetterScale.css" />
+    <script src="L.Control.BetterScale.js"></script>
+    <!-- load plugin control mouse -->
+    <link rel="stylesheet" href="L.Control.MousePosition.css" />
+    <script src="L.Control.MousePosition.js"></script>
+    <!-- load plugin navigate bar -->
+    <link rel="stylesheet" href="Leaflet.NavBar.css" />
+    <script src="Leaflet.NavBar.js"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
+
+    
+    <!-- timeline -->
+    <script src="./leaflet.timeline.js"></script>
+    <link rel="stylesheet" href="leaflet.timeline.css" />
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        width: 100vw;
+        height: 100vh;
+      }
+      
+      .custom-content svg{
+        height:22px;
+        width:22px;
+        padding-top:4px;
+        position:relative;
+      }
+      .custom-content.active::before{
+        content: "+";
+        font-weight: bold;
+        color: black;
+        position: absolute;
+        text-align: center;
+        width: 20px;
+        font-size: 22px;
+      }
+      .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; } .info h4 { margin: 0 0 5px; color: #777; }
+      .legend { text-align: left; line-height: 18px; color: #555; } .legend i { width: 18px; height: 18px; float: left; margin-right: 5px; opacity: 0.7;}
+  </style>
+    </style>
+  </head>
+  <body>
+    <!-- link area zoom -->
+    <script src="L.Control.ZoomBox.js"></script>
+    <div id="map" ></div>
+    <!-- shapefile region du maroc -->
+    <script src = "regionsj.js"></script>
+    <script>
+      function getColorFor(str) {
+        // java String#hashCode
+        var hash = 0;
+        for (var i = 0; i < str.length; i++) {
+          hash = str.charCodeAt(i) + ((hash << 5) - hash);
+        }
+        var red = (hash >> 24) & 0xff;
+        var grn = (hash >> 16) & 0xff;
+        var blu = (hash >> 8) & 0xff;
+        return "rgb(" + red + "," + grn + "," + blu + ")";
+      }
+      
+      //3
+      var OpenStreetMap_Map = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+      });
+      // overlays
+      // get color depending on population density value
+      function getColor(d) {
+        return d > 4550000.0 ? '#f7f7f7' :
+               d > 3550000.0  ? '#cccccc' :
+               d > 2500000.0  ? '#969696' :
+               d > 1500000.0  ? '#636363' :
+                  '#252525';
+      }
+
+      function style(feature) {
+        return {
+          weight: 1,
+          opacity: 1,
+          color: 'white',
+          dashArray: '0',
+          fillOpacity: 0.65,
+          fillColor: getColor(feature.properties.Population)
+        };
+      }
+
+      function highlightFeature(e) {
+        var layer = e.target;
+
+        layer.setStyle({
+          weight: 2,
+          color: '#666',
+          dashArray: '',
+          fillOpacity: 0.9
+        });
+        info.update(layer.feature.properties);
+      }
+
+      function resetHighlight(e) {
+        regions.resetStyle(e.target);
+
+      }
+      function zoomToFeature(e) {
+        map.fitBounds(e.target.getBounds());
+      }
+
+      function onEachFeature(feature, layer) {
+        layer.on({
+          mouseover: highlightFeature,
+          mouseout: resetHighlight, 
+          click : zoomToFeature
+
+        });
+      }
+      var regions = L.geoJSON(maregion, {
+        style: style,
+        onEachFeature: onEachFeature
+      })
+      var overlays = [
+               {
+                groupName : "Maroc",
+                expanded : true,
+                layers    : { 
+                  "Region Du Maroc" : regions,
+                  
+                } 
+                             }             
+      ];
+      var map = L.map("map", {
+        layers: [OpenStreetMap_Map, regions], 
+        center: new L.LatLng(28.8, -10),
+        zoom: 6,
+        fullscreenControl: true,
+        fullscreenControlOptions: { // optional
+        title:"Show me the fullscreen !",
+        titleCancel:"Exit fullscreen mode"}
+      });
+      // control that shows state info on hover
+      var info = L.control();
+
+      info.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'info');
+        this.update();
+        return this._div;
+      };
+
+      info.update = function (props) {
+        this._div.innerHTML = '<h4 style="color:#2E3513!important;">DEFORESTATION DUE AUX INCENDIES POUR LES REGIONS DU MAROC</h4>' +  (props ?
+          '<b>' + props.Nom_Region + '</b> <br />Population de la region : ' + props.Population + '</b><br />' + props.PERTE_FORET + ' hectares' 
+          : 'Cliquez sur le cercle pour plus de données');
+      };
+
+      info.addTo(map);
+      
+      var options = {
+        container_width   : "300px",
+        group_maxHeight     : "80px",
+        //container_maxHeight : "350px", 
+        exclusive         : false,
+        collapsed : true, 
+        position: 'topright'
+      };
+    
+      
+      
+
+      
+      function onLoadData(data) {
+        timeline = L.timeline(data, {
+          pointToLayer: function (feature, latlng) {
+            return L.circleMarker(latlng, {
+              weight: 8,
+              opacity : 0.15,
+              fillColor: '#e7b93c',
+              fillOpacity: 0.8,
+              stroke : true,
+              color: '#e7b93c',
+              radius: getRadius(feature.properties.PERTE_FORET)
+            });
+           },
+          waitToUpdateMap: true,
+          onEachFeature: function (feature, layer) {
+            layer.on('mouseover', function () {
+              layer.setStyle({
+                fillColor: '#e7b93c',
+                fillOpacity: 1
+              });
+              if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
+                layer.bringToFront();
+              }
+              info.update(layer.feature.properties);
+            });
+            layer.on('mouseout', function () {
+              layer.setStyle({
+                fillColor: '#e7b93c',
+                weight: 8,
+                opacity : 0.5,
+                stroke : true,
+                color: '#e7b93c',
+                fillOpacity: 1
+              });
+              info.update();
+            });
+          }
+        });
+        // timeline
+        var timeline;
+        var timelineControl;
+        timelineControl = L.timelineSliderControl({
+          formatOutput: function (date) {
+            return new Date(date).toLocaleDateString();
+          },
+          enableKeyboardControls: true,
+        });
+        timeline.addTo(map);
+        timelineControl.addTo(map);
+        timelineControl.addTimelines(timeline);
+      }
+      function getRadius(rayon) {
+        var radius = Math.sqrt(rayon) ;
+        return radius;
+      };
+      
+
+
+      // add zoom area
+      // Using a custom SVG icon as content
+      var control = L.control.zoomBox({
+        addToZoomControl: true,
+        modal: true,
+        className: "custom-content",
+        content: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0,0)"><path fill="rgba(0, 0, 0, 1)" d="M138.563 16.063C83.49 42.974 41.459 86.794 16.124 138.53l59.938 29.407c18.988-38.845 50.47-71.807 91.812-92l-29.313-59.874zm234.843.156L344 76.124c38.846 18.99 71.807 50.47 92 91.813l59.875-29.313c-26.913-55.073-70.732-97.073-122.47-122.406zm62.53 327.717c-18.982 38.865-50.53 71.673-91.873 91.875l29.437 60.125c55.116-26.925 97.085-70.76 122.375-122.562l-59.938-29.438zm-359.936.125l-60 29.375c26.928 55.097 70.776 97.082 122.563 122.375l29.406-59.937C129.122 416.885 96.192 385.4 76 344.062z"></path></g></svg>'
+      });
+      map.addControl(control);
+      // add nav bar
+      L.control.navbar().addTo(map);
+      // detect fullscreen toggling
+      map.on('enterFullscreen', function(){
+        if(window.console) window.console.log('enterFullscreen');
+      });
+      map.on('exitFullscreen', function(){
+        if(window.console) window.console.log('exitFullscreen');
+      });
+      
+     
+      //legend
+      var legend = L.control({position: 'bottomleft'});
+
+      legend.onAdd = function (map) {
+
+        var div = L.DomUtil.create('div', 'info legend'),
+          grades = [4550000.0,3550000.0,2500000.0,1500000.0],
+          labels = [],
+          from, to;
+          div.innerHTML = '<div><h3 style="font-weight:bolder;font-size:larger;">La population </br> maroccaine par region</h3>'
+
+        for (var i = 0; i < grades.length; i++) {
+          from = grades[i];
+          to = grades[i + 1];
+
+          labels.push(
+            '<i style="background:' + getColor(to) + '"></i> ' +
+            from + (to ? '&ndash;' + to : '+'));
+        }
+
+        div.innerHTML += '<ul style="list-style-type:none;display:inline-block;padding:0;width:250px">' + labels.join('</br>') + '</ul>';
+        return div;
+      };
+      
+
+      legend.addTo(map);
+
+    </script>
+
+    
+
+    <script src="./centroideR.jsonp"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,259 @@
+onLoadData({
+"type": "FeatureCollection",
+"name": "mar_cent",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+
+{ "type": "Feature", "properties": { "Population": 3556729.0, "Nom_Region": "TANGER-TETOUAN-AL HOCEIMA", "PERTE_FORET": 1111.39, 
+"start": 978307400000, "end": 1167523400000.00
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -5.1765, 35.1471 ] } },
+{ "type": "Feature", "properties": { "Population": 2314346.0, "Nom_Region": "ORIENTAL-RIF", "PERTE_FORET": 24.29, 
+"start": 978307400000, "end": 1167523400000.00
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -2.6618, 33.5225 ] } },
+{ "type": "Feature", "properties": { "Population": 4580866.0, "Nom_Region": "FES-MEKNES", "PERTE_FORET": 155.55, 
+"start": 978307400000, "end": 1167523400000.00
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -6.21, 34.0659 ] } },
+{ "type": "Feature", "properties": { "Population": 2520776.0, "Nom_Region": "RABAT-SALE-KENITRA", "PERTE_FORET": 177.26, 
+"start": 978307400000, "end": 1167523400000.00
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -6.3013, 32.4587 ] } },
+{ "type": "Feature", "properties": { "Population": 4520569.0, "Nom_Region": "BENI MELLAL-KHENIFRA", "PERTE_FORET": 49.62, 
+"start": 978307400000, "end": 1167523400000.00
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -8.458, 31.7025 ] } },
+{ "type": "Feature", "properties": { "Population": 1635008.0, "Nom_Region": "MARRAKECH-SAFI", "PERTE_FORET": 64.48, 
+"start": 978307400000, "end": 1167523400000.00
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -5.3557, 31.2042 ] } },
+{ "type": "Feature", "properties": { "Population": 2676847.0, "Nom_Region": "DRAA-TAFILALET", "PERTE_FORET": 144.57, 
+"start": 978307400000, "end": 1167523400000.00
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -8.3372, 29.9212 ] } },
+{ "type": "Feature", "properties": { "Population": 433757.0, "Nom_Region": "SOUSS-MASSA", "PERTE_FORET": 1.57, 
+"start": 978307400000, "end": 1167523400000.00
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -9.9506, 28.3447 ] } },
+{ "type": "Feature", "properties": { "Population": 367758.0, "Nom_Region": "GUELMIM-OUED NOUN", "PERTE_FORET": 0.0, "start": 978307400000, "end": 1072828800000 
+
+}, "geometry": { "type": "Point", "coordinates": [ -12.01, 26.3208 ] } },
+{ "type": "Feature", "properties": { "Population": 142955.0, "Nom_Region": "LAAYOUNE-BOUJDOUR-SAKIA AL HAMRA", "PERTE_FORET": 0.0, 
+"start": 978307400000, "end": 1167523400000.00
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -14.4661, 22.8803 ] } },
+{ "type": "Feature", "properties": { "Population": 6861739.0, "Nom_Region": "ED DAKHLA-OUED EDDAHAB", "PERTE_FORET": 0, 
+"start": 978307400000, "end": 1167523400000.00
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -7.7745, 33.005 ] } },
+{ "type": "Feature", "properties": { "Population": 4236892.0, "Nom_Region": "CASABLANCA-SETTAT", "PERTE_FORET": 64.74, 
+"start": 978307400000, "end": 1167523400000.00
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -4.51, 33.69 ] } },
+{ "type": "Feature", "properties": { "Population": 3556729.0, "Nom_Region": "TANGER-TETOUAN-AL HOCEIMA", "PERTE_FORET": 1295.74, 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -5.1765, 35.1471 ] } },
+{ "type": "Feature", "properties": { "Population": 2314346.0, "Nom_Region": "ORIENTAL-RIF", "PERTE_FORET": 40.33, 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -2.6618, 33.5225 ] } },
+{ "type": "Feature", "properties": { "Population": 4580866.0, "Nom_Region": "FES-MEKNES", "PERTE_FORET": 98.69 , 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -6.21, 34.0659 ] } },
+{ "type": "Feature", "properties": { "Population": 2520776.0, "Nom_Region": "RABAT-SALE-KENITRA", "PERTE_FORET": 153.00, 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -6.3013, 32.4587 ] } },
+{ "type": "Feature", "properties": { "Population": 4520569.0, "Nom_Region": "BENI MELLAL-KHENIFRA", "PERTE_FORET": 34.45, 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -8.458, 31.7025 ] } },
+{ "type": "Feature", "properties": { "Population": 1635008.0, "Nom_Region": "MARRAKECH-SAFI", "PERTE_FORET": 28.86, 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -5.3557, 31.2042 ] } },
+{ "type": "Feature", "properties": { "Population": 2676847.0, "Nom_Region": "DRAA-TAFILALET", "PERTE_FORET": 89.85, 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -8.3372, 29.9212 ] } },
+{ "type": "Feature", "properties": { "Population": 433757.0, "Nom_Region": "SOUSS-MASSA", "PERTE_FORET": 3.75, 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -9.9506, 28.3447 ] } },
+{ "type": "Feature", "properties": { "Population": 367758.0, "Nom_Region": "GUELMIM-OUED NOUN", "PERTE_FORET": 0.0, 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -12.01, 26.3208 ] } },
+{ "type": "Feature", "properties": { "Population": 142955.0, "Nom_Region": "LAAYOUNE-BOUJDOUR-SAKIA AL HAMRA", "PERTE_FORET": 0.0, 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -14.4661, 22.8803 ] } },
+{ "type": "Feature", "properties": { "Population": 6861739.0, "Nom_Region": "ED DAKHLA-OUED EDDAHAB", "PERTE_FORET": 0.0, 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -7.7745, 33.005 ] } },
+{ "type": "Feature", "properties": { "Population": 4236892.0, "Nom_Region": "CASABLANCA-SETTAT", "PERTE_FORET": 21.17, 
+"start": 1167609800000, "end": 1356912200000
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -4.51, 33.69 ] } },
+
+{ "type": "Feature", "properties": { "Population": 3556729.0, "Nom_Region": "TANGER-TETOUAN-AL HOCEIMA", "PERTE_FORET": 1065.02, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -5.1765, 35.1471 ] } },
+{ "type": "Feature", "properties": { "Population": 2314346.0, "Nom_Region": "ORIENTAL-RIF", "PERTE_FORET": 35.46, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -2.6618, 33.5225 ] } },
+{ "type": "Feature", "properties": { "Population": 4580866.0, "Nom_Region": "FES-MEKNES", "PERTE_FORET": 28.0, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -6.21, 34.0659 ] } },
+{ "type": "Feature", "properties": { "Population": 2520776.0, "Nom_Region": "RABAT-SALE-KENITRA", "PERTE_FORET": 235.36, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -6.3013, 32.4587 ] } },
+{ "type": "Feature", "properties": { "Population": 4520569.0, "Nom_Region": "BENI MELLAL-KHENIFRA", "PERTE_FORET": 5.51, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -8.458, 31.7025 ] } },
+{ "type": "Feature", "properties": { "Population": 1635008.0, "Nom_Region": "MARRAKECH-SAFI", "PERTE_FORET": 29.01, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -5.3557, 31.2042 ] } },
+{ "type": "Feature", "properties": { "Population": 2676847.0, "Nom_Region": "DRAA-TAFILALET", "PERTE_FORET": 22.54, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -8.3372, 29.9212 ] } },
+{ "type": "Feature", "properties": { "Population": 433757.0, "Nom_Region": "SOUS-MASSA", "PERTE_FORET": 0.45, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -9.9506, 28.3447 ] } },
+{ "type": "Feature", "properties": { "Population": 367758.0, "Nom_Region": "GUELMIM-OUED NOUN", "PERTE_FORET": 0.0, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -12.01, 26.3208 ] } },
+{ "type": "Feature", "properties": { "Population": 142955.0, "Nom_Region": "LAAYOUNE-BOUJDOUR-SAKIA AL HAMRA", "PERTE_FORET": 0.0, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -14.4661, 22.8803 ] } },
+{ "type": "Feature", "properties": { "Population": 6861739.0, "Nom_Region": "ED DAKHLA-OUED EDDAHAB", "PERTE_FORET": 0.0, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -7.7745, 33.005 ] } },
+{ "type": "Feature", "properties": { "Population": 4236892.0, "Nom_Region": "CASABLANCA-SETTAT", "PERTE_FORET": 13.48, 
+"start": 1356998600000, "end": 1577750600000
+
+
+
+
+
+ }, "geometry": { "type": "Point", "coordinates": [ -4.51, 33.69 ] } }
+
+]
+});

@@ -1,0 +1,12 @@
+.leaflet-bottom.leaflet-left {
+  width: 37%;
+  bottom: 0%;
+  left : 0%;
+}
+.leaflet-control-container .leaflet-timeline-controls {
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 15px;
+  
+}
