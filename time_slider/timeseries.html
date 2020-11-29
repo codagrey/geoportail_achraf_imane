@@ -1,6 +1,11 @@
 <html>
   <head>
     <title>Leaflet.timeline Morocco</title>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+  <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+  
     <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -34,8 +39,8 @@
         padding: 0;
       }
       #map {
-        width: 100vw;
-        height: 100vh;
+        width: 1500px;
+        height: 600px;
       }
       
       .custom-content svg{
@@ -58,7 +63,92 @@
   </style>
     </style>
   </head>
-  <body>
+  <body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('images/demo/backgrounds/iCv.gif');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row0">
+    <div id="topbar" class="hoc clear">
+      <div class="fl_left"> 
+        <!-- ################################################################################################ -->
+         <ul class="nospace">
+          <li><i class="far fa-envelope rgtspace-5"></i> achrafrah98@gmail.com</li><br>
+          <li><i class="far fa-envelope rgtspace-5"></i> imanejeddouba@gmail.com</li><br>
+          <li>
+          <a href="https://www.iav.ac.ma/">
+          Site officiel de l'I.A.V. Hassan II</a>
+          </li><br>
+          <li>
+          <a href="#">
+          Code source (GitHub)</a>
+          </li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </div>
+      <div class="fl_right"> 
+        <!-- ################################################################################################ -->
+        <ul class="nospace">
+          <li><a href="../index.html"><i class="fas fa-home"></i></a></li>
+          
+        </ul>
+        <!-- ################################################################################################ -->
+      </div>
+    </div>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear">
+      <div id="logo" class="fl_left"> 
+        <!-- ################################################################################################ -->
+        <h1><a href="index.html">Projet Web Mapping</a></h1>
+        <h2>Changements climatiques au Maroc<br>et au Nord de l’Afrique<h2/>
+        <!-- ################################################################################################ -->
+      </div>
+      <nav id="mainav" class="fl_right"> 
+        <!-- ################################################################################################ -->
+        <ul class="clear">
+          <li class="active"><a href="../index.html">Home</a></li>
+          <li><a class="drop" href="#">Maroc</a>
+            <ul>
+              <li><a href="../choroplethe_maroc/choroplethe.html">Stress hydrique par région</a></li>
+              <li><a href="../symboles_prop_maroc/symbpropfinal_maroc.html">Perte des forêts entre 2013 et 2019 en hectare</a></li>
+              <li><a href="../time_slider/timeseries.html">Carte dynamique : Perte des forêts</a></li>
+            </ul>
+          </li>
+          <li><a class="drop" href="#">Afrique du nord</a>
+            <ul>
+              <li><a href="../choroplethe_NA/choroplethe_NA.html">Indice d'aridité moyen entre 2000 et 2016</a></li>
+              <li><a href="../symboles_prop_NA/symbpropfinal.html">Total d'émission de CO2 en 2019</a>
+              </li>
+              <li><a href="../choroplethe3D/index.html">Carte 3D : Indice d'aridité </a></li>
+            </ul>
+          </li>
+          <li><a class="drop" href="#">D3.JS</a>
+            <ul>
+              <li><a href="../vitesse_vent/index.html">Vitesse du vent annuelle pour des stations spécifiques</a></li>
+              <li><a href="#">Deforestation au nord de l'Afrique</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <!-- ################################################################################################ -->
+      </nav>
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <section id="splitfifty" class="hoc container clear">
+      <p class="nospace font-xs">Carte dynamique : </p>
+      <p class="heading underline font-x2">Maroc : Deforestation dûe aux incendies pour les régions du Maroc</p>
+    </div>
+  <!-- ################################################################################################ -->
+</div>
     <!-- link area zoom -->
     <script src="L.Control.ZoomBox.js"></script>
     <div id="map" ></div>
@@ -148,7 +238,7 @@
       var map = L.map("map", {
         layers: [OpenStreetMap_Map, regions], 
         center: new L.LatLng(28.8, -10),
-        zoom: 6,
+        zoom: 5,
         fullscreenControl: true,
         fullscreenControlOptions: { // optional
         title:"Show me the fullscreen !",
@@ -294,6 +384,64 @@
     
 
     <script src="./centroideR.jsonp"></script>
+<div class="bgded overlay row4" style="background-image:url('images/demo/backgrounds/nature.gif');">
+  <footer id="footer" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <div class="center btmspace-50">
+      <h6 class="heading">Contact</h6>
+
+      <p class="nospace center">Contactez Achraf</p>&nbsp;
+      <ul class="faico clear">
+        
+        <li><a class="faicon-facebook" href="https://www.facebook.com/achraf.rah.108"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-linkedin" href="https://www.linkedin.com/in/achraf-rahmouni-4a43411a3/"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+    </div>
+
+      <p class="nospace center">Contactez Imane</p>&nbsp;
+    <div class="center btmspace-50">
+      <ul class="faico clear">
+        
+        <li><a class="faicon-facebook" href="https://www.facebook.com/imane.jeddoub"><i class="fab fa-facebook"></i></a></li>
+        <li><a class="faicon-linkedin" href="https://www.linkedin.com/in/imane-jeddoub-ba5a55178"><i class="fab fa-linkedin"></i></a></li>
+      </ul>
+      
+    </div>
+    <br>
+    <!-- ################################################################################################ -->
+    <hr class="btmspace-50">
+    <!-- ################################################################################################ -->
+    <p class="center">Avez-vous des questions ? N'hesitez pas à les poser en cliquant sur le bouton ci-dessous!
+    &nbsp;&nbsp;
+    <ul class="nospace inlin center">
+          <li><br><a class="btn center" href="https://forms.gle/H8cfkjvAG7ZA8Kh5A">Requête</a></li>
+        </ul>
+      
+      <!-- ################################################################################################ -->
+    </div>
     
-  </body>
+    <!-- ################################################################################################ -->
+  </footer>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2020 - All Rights Reserved -</p>
+    <p class="fl_right">Template by <a target="_blank" href="https://www.os-templates.com/" title="Free Website Templates">OS Templates</a></p>
+    <!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="layout/scripts/jquery.min.js"></script>
+<script src="layout/scripts/jquery.backtotop.js"></script>
+<script src="layout/scripts/jquery.mobilemenu.js"></script>
+
+</body>
 </html>
