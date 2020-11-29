@@ -203,8 +203,7 @@
   	function highlightFeature(e) {
         var layer = e.target;
         var popup =
-          '<p>Pays: <b> ' + layer.feature.properties.COUNTRY + '</b></p>' +
-          '<p>La superfecie du Pays: ' + layer.feature.properties.Temp_2006_2011 + ' kilometers au carré</p>'
+          '<p>Pays: <b> ' + layer.feature.properties.COUNTRY + '</b></p>' 
         layer.bindPopup(popup).openPopup();
         layer.setStyle({
           weight: 3,
@@ -276,9 +275,17 @@
       L.control.navbar().addTo(map);
       // detect fullscreen toggling
       
-      
+  var legend = L.control({position: 'bottomleft'}); 
+
+legend.onAdd = function (map) {
+ var divLeg = L.DomUtil.create('div', 'info legend');
+ divLeg.innerHTML +='<img  src="legende.png">';
+ return divLeg;
+}; 
+
+legend.addTo(map);   
 </script>
-<img src="legende.png" class="center" height= "20%" width="20%"/>
+
 
 <div class="bgded overlay row4" style="background-image:url('images/demo/backgrounds/nature.gif');">
   <footer id="footer" class="hoc clear"> 
