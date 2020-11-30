@@ -16,7 +16,7 @@
 <script src="./dat-gui/dat.gui.min.js"></script>
 <script src="./dat-gui_panel.js"></script>
 </head>
-<body id="top">
+<body>
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
@@ -56,12 +56,7 @@
   <!-- ################################################################################################ -->
   <div class="wrapper row1">
     <header id="header" class="hoc clear">
-      <div id="logo" class="fl_left"> 
-        <!-- ################################################################################################ -->
-        <h1></h1>
-        <h2><h2/>
-        <!-- ################################################################################################ -->
-      </div>
+     
       <nav id="mainav" class="fl_right"> 
         <!-- ################################################################################################ -->
         <ul class="clear">
@@ -84,7 +79,7 @@
           <li><a class="drop" href="#">D3.JS</a>
             <ul>
               <li><a href="../vitesse_vent/index.html">Vitesse du vent annuelle pour des stations spécifiques</a></li>
-              <li><a href="#">Deforestation au nord de l'Afrique</a>
+              <li><a href="../d3js_charts/index.html">Chartes graphiques : Maroc</a>
               </li>
             </ul>
           </li>
@@ -97,12 +92,11 @@
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <section id="splitfifty" class="hoc container clear">
-      <p class="nospace font-xs">Carte 3D</p>
-      <p class="heading underline font-x2">Maroc : Indice d'aridité moyen entre 2000 et 2016</p>
+      <p class="nospace font-xs">D3.JS</p>
+      <p class="heading underline font-x2">Afrique du nord : Carte 3D sur l'indice d'aridité</p>
     </div>
   <!-- ################################################################################################ -->
 </div>
-
 <div id="view">
   <div id="labels"></div>
   <div id="northarrow"></div>
@@ -212,6 +206,7 @@ app.loadSceneFile("./data/index/scene.js", function () {
   if (Q3D.Config.northArrow.visible) app.buildNorthArrow(document.getElementById("northarrow"), app.scene.userData.rotation);
 });
 </script>
+
 
 
 </body>

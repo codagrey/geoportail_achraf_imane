@@ -1,38 +1,20 @@
 <!DOCTYPE html>
-<html>
+<!--
+Template Name: Sislaf
+Author: <a href="https://www.os-templates.com/">OS Templates</a>
+Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
+Licence: Free to use under our free template licence terms
+Licence URI: https://www.os-templates.com/template-terms
+-->
+<html lang="">
+<!-- To declare your language - read more here: https://www.w3.org/International/questions/qa-html-language-declarations -->
 <head>
-  <title>Leaflet with D3 popups</title>
-  <meta charset="utf-8">
+<title>Sislaf | Pages | Full Width</title>
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<link href="layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
-  <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
-  
-  
-   <script type="text/javascript" src="http://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=azdsmSF5iX4Ej8B2Om6eRgHjbJHAsjZYy4GwL6sUG0RbkHudI4sIFwkQ2x9eED2vWiXKsqjwFCeI4POjhLgDFs95QLRzj-W_bOc7bB-Q40aMExf27SBrL4gTApeSfzTOeCPi_ft_mKRYWXRZk1bQxge3aTELcIF89Xu-a6S0Vvg" charset="UTF-8"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
-   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ==" crossorigin=""/>
-
-   <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js" integrity="sha512-/Nsx9X4HebavoBvEBuyp3I7od5tA0UzAxs+j83KgC8PU0kgB4XiK4Lfe4y4cgBtaRJQEIFCW+oC506aPT2L1zw==" crossorigin=""></script>
-
-   
-   <!-- load plugin navigate bar -->
-    <link rel="stylesheet" href="Leaflet.NavBar.css" />
-    <script src="Leaflet.NavBar.js"></script>
-
-    <!-- load plugin full screen -->
-    <link rel="stylesheet" href="Control.FullScreen.css" />
-    <script src="Control.FullScreen.js"></script>
-
-    <!-- load plugin ruler -->
-  <link rel="stylesheet" href="leaflet-ruler.css" />
-  <script src="leaflet-ruler.js"></script>
-
-
-   <style>
-      .leaflet-popup-content {
-        width: auto !important;
-      }
-      .info { padding: 6px 8px; font: 14px/16px Arial, Helvetica, sans-serif; background: white; background: rgba(255,255,255,0.8); box-shadow: 0 0 15px rgba(0,0,0,0.2); border-radius: 5px; position: relative; top: 420px; } .info h4 { margin: 0 0 5px; color: #777; }
-   </style>
+<link href="../layout/styles/layout.css" rel="stylesheet" type="text/css" media="all">
+<link rel="stylesheet" href="styles.css">
     
 </head>
 <body id="top">
@@ -102,7 +84,7 @@
           </li>
           <li><a class="drop" href="#">D3.JS</a>
             <ul>
-              <li><a href="vitesse_vent/index.html">Vitesse du vent annuelle pour des stations spécifiques</a></li>
+              <li><a href="../vitesse_vent/index.html">Vitesse du vent annuelle pour des stations spécifiques</a></li>
               <li><a href="../d3js_charts/index.html">Chartes graphiques : Maroc</a>
               </li>
             </ul>
@@ -116,200 +98,152 @@
   <!-- ################################################################################################ -->
   <!-- ################################################################################################ -->
   <section id="splitfifty" class="hoc container clear">
-      <p class="nospace font-xs">Carte d3.js :</p>
-      <p class="heading underline font-x2">Maroc : Vitesse du vent annuelle pour des stations météorologiques spécifiques</p>
+      <p class="nospace font-xs">D3.JS</p>
+      <p class="heading underline font-x2">Maroc : Chartes graphiques</p>
     </div>
   <!-- ################################################################################################ -->
 </div>
+<div class="wrapper row3">
+<main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+<div class="content"> 
+      <!-- ################################################################################################ -->
+      <h1>Variation de la précipitation (en mm) en fonction de la température (en °C) au Maroc entre 2000 et 2016 :</h1>
+      <div class="scrollable">
+        <div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <script src="https://unpkg.com/d3@5.6.0/dist/d3.min.js"></script>
+    <svg width="960" height="500"></svg>
+    <script src="bundle.js"></script>
+    <!-- ################################################################################################ -->
+<!-- End Top Background Image Wrapper -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+      <!-- ################################################################################################ -->
+      <h1>Variation des taux de CH4,CO2,N2O et des gaz fluorés au Maroc entre 2000 et 2016 (en MTCO2e):</h1>
+      <div class="scrollable">
+        <div class="wrapper row3">
+  <main class="hoc container clear"> 
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <div class="content"> 
+
 
     <!-- ################################################################################################ -->
-    <!-- / main body -->
-    <div class="clear"></div>
-  </main>
-</div>
-  <script src="L.Control.ZoomBox.js"></script>
-  <script type="text/javascript", src = "regions.js"></script>
-<div id="mapid" style="width: 1500px; height: 600px;"></div>
+<!-- Load d3.js -->
+<script src="https://d3js.org/d3.v4.js"></script>
+
+<!-- Initialize a select button -->
+<select id="selectButton"></select>
+
+<!-- Create a div where the graph will take place -->
+<div id="my_dataviz"></div>
+
+<!-- Color Scale -->
+<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+
+
 <script>
 
+// set the dimensions and margins of the graph
+var margin = {top: 50, right: 100, bottom: 30, left: 60},
+    width = 900 - margin.left - margin.right,
+    height = 600 - margin.top - margin.bottom;
 
-//var mymap = L.map('mapid').setView([51.5, -0.14], 14);
-var mymap = L.map('mapid').setView([30, -9], 5);
-L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-  maxZoom: 20,
-  attribution: '&copy; Openstreetmap France | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(mymap);
+// append the svg object to the body of the page
+var svg = d3.select("#my_dataviz")
+  .append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform",
+          "translate(" + margin.left + "," + margin.top + ")");
 
-// add nav bar
-L.control.navbar().addTo(mymap);
+//Read the data
+d3.csv("https://codagrey.github.io/covid19/emission_f.csv", function(data) {
 
-// detect fullscreen toggling
-       // Using a custom SVG icon as content
-      var control = L.control.zoomBox({
-        addToZoomControl: true,
-        modal: true,
-        className: "custom-content",
-        content: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g transform="translate(0,0)"><path fill="rgba(0, 0, 0, 1)" d="M138.563 16.063C83.49 42.974 41.459 86.794 16.124 138.53l59.938 29.407c18.988-38.845 50.47-71.807 91.812-92l-29.313-59.874zm234.843.156L344 76.124c38.846 18.99 71.807 50.47 92 91.813l59.875-29.313c-26.913-55.073-70.732-97.073-122.47-122.406zm62.53 327.717c-18.982 38.865-50.53 71.673-91.873 91.875l29.437 60.125c55.116-26.925 97.085-70.76 122.375-122.562l-59.938-29.438zm-359.936.125l-60 29.375c26.928 55.097 70.776 97.082 122.563 122.375l29.406-59.937C129.122 416.885 96.192 385.4 76 344.062z"></path></g></svg>'
-      });
-      mymap.addControl(control);
-      
-      // detect fullscreen toggling
-      mymap.on('enterFullscreen', function(){
-        if(window.console) window.console.log('enterFullscreen');
-      });
-      mymap.on('exitFullscreen', function(){
-        if(window.console) window.console.log('exitFullscreen');
-      });
+    // List of groups (here I have one group per column)
+    var allGroup = ["CH4", "CO2", "N2O", "F_GAS"]
 
+    // add the options to the button
+    d3.select("#selectButton")
+      .selectAll('myOptions')
+      .data(allGroup)
+      .enter()
+      .append('option')
+      .text(function (d) { return d; }) // text showed in the menu
+      .attr("value", function (d) { return d; }) // corresponding value returned by the button
 
-// add control ruler
-  L.control.ruler().addTo(mymap);
-// add shapefile
+    // A color scale: one color for each group
+    var myColor = d3.scaleOrdinal()
+      .domain(allGroup)
+      .range(d3.schemeSet2);
 
-var regions = L.geoJSON(maregion, {
-  style: style,
-  onEachFeature: onEachFeature,
-})
-.addTo(mymap)
-.bindPopup(chart);
-    
-function chart(d) {
-  var feature = d.feature;
-  var data = feature.properties.data;
-  
-  var width = 200;
-  var height = 80;
-  var margin = {left:30,right:25,top:50,bottom:50};
-  var parse = d3.timeParse("%Y") ; // il faut les régler
-  var format = d3.timeFormat("%Y");
-   
-  var div = d3.create("div")
-  var svg = div.append("svg")
-    .attr("width", width+margin.left+margin.right)
-    .attr("height", height+margin.top+margin.bottom);
-  var g = svg.append("g")
-    .attr("transform","translate("+[margin.left,margin.top]+")");
-    
-  var y = d3.scaleLinear()
-    .domain([0, d3.max(data, function(d) { return d; }) ])
-    .range([height,0]);
-    
-  var yAxis = d3.axisLeft()
-    .ticks(4)
-    .scale(y);
-  g.append("g").call(yAxis);
-    
-  var x = d3.scaleBand()
-    .domain(d3.range(7))
-    .range([0,width]);
-    
-  var xAxis = d3.axisBottom()
-    .scale(x)
-    .tickFormat(function(d) { return format(parse(d+2013)); });
-    
-  g.append("g")
+    // Add X axis --> it is a date format
+    var x = d3.scaleLinear()
+      .domain([2000,2016])
+      .range([ 0, width ]);
+    svg.append("g")
       .attr("transform", "translate(0," + height + ")")
-      .call(xAxis)
-      .selectAll("text")
-      .attr("text-anchor","end")
-      .attr("transform","rotate(-90)translate(-12,-15)")
-    
-  var rects = g.selectAll("rect")
-    .data(data)
-    .enter()
-    .append("rect")
-    .attr("y",height)
-    .attr("height",0)
-    .attr("width", x.bandwidth()-2 )
-    .attr("x", function(d,i) { return x(i); })
-    .attr("fill","deepskyblue")
-    .transition()
-    .attr("height", function(d) { return height-y(d); })
-    .attr("y", function(d) { return y(d); })
-    .duration(1000);
-    
-  var title = svg.append("text")
-    .style("font-size", "10px")
-    .text(feature.properties.title)
-    .attr("x", width/2 + margin.left)
-    .attr("y", 30)
-    .attr("text-anchor","middle");
-    
-  return div.node();
-    
-}  
+      .call(d3.axisBottom(x));
 
-// style 
+    // Add Y axis
+    var y = d3.scaleLinear()
+      .domain( [0,70])
+      .range([ height, 0 ]);
+    svg.append("g")
+      .call(d3.axisLeft(y));
 
-function style(feature) {
-        return {
-          weight: 1,
-          opacity: 1,
-          color: 'white',
-          dashArray: '3',
-          fillOpacity: 0.65,
-          fillColor: "#d9bcba"
-        };
-      }
+    // Initialize line with group a
+    var line = svg
+      .append('g')
+      .append("path")
+        .datum(data)
+        .attr("d", d3.line()
+          .x(function(d) { return x(+d.Annee) })
+          .y(function(d) { return y(+d.CH4) })
+        )
+        .attr("stroke", function(d){ return myColor("valueA") })
+        .style("stroke-width", 4)
+        .style("fill", "none")
 
-// mouseover
-function highlightFeature(e) {
-      var layer = e.target;
+    // A function that update the chart
+    function update(selectedGroup) {
 
-      layer.setStyle({
-        weight: 5,
-        color: "#fcae91",
-        dashArray: "",
-        fillOpacity: 0.7
-      });
-      
-      if (!L.Browser.ie && !L.Browser.opera && !L.Browser.edge) {
-        layer.bringToFront();
-      }
+      // Create new data with the selection?
+      var dataFilter = data.map(function(d){return {Annee: d.Annee, value:d[selectedGroup]} })
 
-      info.update(layer.feature.properties);
-      
-}
-
-
-// mouseout
-function resetHighlight(e) {
-      regions.resetStyle(e.target);
-      regions.closePopup();
-      info.update();
-      
-}
-
-    function onEachFeature(feature, layer) {
-      layer.on({
-        mouseover: highlightFeature,
-        mouseout: resetHighlight
-      });
+      // Give these new data to update line
+      line
+          .datum(dataFilter)
+          .transition()
+          .duration(100)
+          .attr("d", d3.line()
+            .x(function(d) { return x(+d.Annee) })
+            .y(function(d) { return y(+d.value) })
+          )
+          .attr("stroke", function(d){ return myColor(selectedGroup) })
     }
 
-// display information
+    // When the button is changed, run the updateChart function
+    d3.select("#selectButton").on("change", function(d) {
+        // recover the option that has been chosen
+        var selectedOption = d3.select(this).property("value")
+        // run the updateChart function with this selected option
+        update(selectedOption)
+    })
 
-var info = L.control();
-
-      info.onAdd = function (map) {
-        this._div = L.DomUtil.create('div', 'info');
-        this.update();
-        return this._div;
-      };
-
-
-info.update = function (props) {
-        this._div.innerHTML = '<h4 style="color:#2E3513!important;">Vitesse du vent annuelle pour des stations météorologiques spécifiques</h4>' +  (props ?
-          '<b>' + props.Nom_Region + '</b><br />' + props.Population + ' habitants' 
-          : ' Cliquez sur la région pour afficher les données sur la vitesse moyenne annuelle du vent');
-      };
-
-info.addTo(mymap);
-      
-
-
-
-    
+})
 </script>
 <div class="bgded overlay row4" style="background-image:url('images/demo/backgrounds/nature.gif');">
   <footer id="footer" class="hoc clear"> 
@@ -369,11 +303,6 @@ info.addTo(mymap);
 <script src="layout/scripts/jquery.min.js"></script>
 <script src="layout/scripts/jquery.backtotop.js"></script>
 <script src="layout/scripts/jquery.mobilemenu.js"></script>
-
-</body>
-</html>
-
-
 
 </body>
 </html>
